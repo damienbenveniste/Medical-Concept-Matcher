@@ -1,6 +1,6 @@
 import os
 import csv
-from typing import Dict, List, Set, Union
+from typing import Dict, Union
 from pydantic import BaseModel
 import chromadb
 from app.clients import async_openai_client
@@ -103,7 +103,7 @@ class Indexer:
         
         return data
     
-    async def embed_batch(self, batch: List[Data]) -> List[List[float]]:
+    async def embed_batch(self, batch: list[Data]) -> list[list[float]]:
         """Generate embeddings for a batch of medical codes.
         
         Args:
@@ -125,7 +125,7 @@ class Indexer:
             print(f"Embedding failed for batch (size {len(batch)}): {e}")
             raise
 
-    async def embed_data(self, data: List[Data]) -> List[List[float]]:
+    async def embed_data(self, data: list[Data]) -> list[list[float]]:
         """Generate embeddings for all data in batches.
         
         Args:
@@ -141,14 +141,14 @@ class Indexer:
             batch = data[i:i+batch_size]
             tasks.append(asyncio.create_task(self.embed_batch(batch)))
         
-        batch_results: List[List[List[float]]] = await asyncio.gather(*tasks)
-        embeddings: List[List[float]] = []
+        batch_results = await asyncio.gather(*tasks)
+        embeddings = []
         for batch_embeddings in batch_results:
             embeddings.extend(batch_embeddings)
         
         return embeddings
     
-    async def index_data(self, data: List[Data], collection: str) -> None:
+    async def index_data(self, data: list[Data], collection: str) -> None:
         """Index medical code data into ChromaDB collection.
         
         Args:
@@ -167,7 +167,7 @@ class Indexer:
                 unique_data[item.code] = item
         data = list(unique_data.values())
         
-        embeddings: List[List[float]] = await self.embed_data(data)
+        embeddings = await self.embed_data(data)
 
         # Add in batches to respect ChromaDB limits
         batch_size: int = 5000
@@ -183,26 +183,26 @@ class Indexer:
 
     async def index_all(self) -> None:
         """Index all medical vocabulary datasets concurrently."""
-        icd_data: List[Data] = self.get_icd_data()
-        cpt_data: List[Data] = self.get_cpt_data()
-        loinc_data: List[Data] = self.get_loinc_data()
-        atc_data: List[Data] = self.get_atc_data()
+        icd_data = self.get_icd_data()
+        cpt_data = self.get_cpt_data()
+        loinc_data = self.get_loinc_data()
+        atc_data = self.get_atc_data()
 
-        tasks: List[asyncio.Task] = [
+        tasks = [
             asyncio.create_task(self.index_data(icd_data, Datasets.ICD)),
             asyncio.create_task(self.index_data(cpt_data, Datasets.CPT)), 
             asyncio.create_task(self.index_data(loinc_data, Datasets.LOINC)), 
             asyncio.create_task(self.index_data(atc_data, Datasets.ATC)) 
         ]
 
-        results: List[Union[None, Exception]] = await asyncio.gather(*tasks, return_exceptions=True)
+        results = await asyncio.gather(*tasks, return_exceptions=True)
         for i, result in enumerate(results):
             if isinstance(result, Exception):
                 print(f"Task {i} failed: {result}")
             else:
                 print(f"Task {i} completed successfully")
 
-    async def search(self, query: str, collection: str, max_results: int = 15) -> List[Data]:
+    async def search(self, query: str, collection: str, max_results: int = 15) -> list[Data]:
         """Search for medical codes using vector similarity.
         
         Args:
@@ -226,9 +226,9 @@ class Indexer:
             include=["documents"]
         )
 
-        docs: List[str] = results["documents"][0]  # ChromaDB returns nested list
-        ids: List[str] = results["ids"][0]
-        data: List[Data] = [Data(code=code, text=doc) for code, doc in zip(ids, docs)]
+        docs = results["documents"][0]  # ChromaDB returns nested list
+        ids = results["ids"][0]
+        data = [Data(code=code, text=doc) for code, doc in zip(ids, docs)]
         return data
     
 

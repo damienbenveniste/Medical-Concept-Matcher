@@ -1,4 +1,3 @@
-from app.indexing.indexer import Data
 from pydantic import BaseModel, Field
 from app.concept.matcher_agent.state import MatcherAgentState, CodeItem
 from app.clients import async_openai_client

@@ -1,6 +1,6 @@
 
 
-from typing import Dict, str
+from typing import Dict
 from fastapi import APIRouter, HTTPException
 from app.indexing.indexer import Indexer
 import logging

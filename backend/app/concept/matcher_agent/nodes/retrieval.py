@@ -31,7 +31,7 @@ class Retriever:
             raise NotImplementedError(f"Concept type '{state.concept_type}' is not supported")
         
         indexer = Indexer()
-        results: list[Data] = await indexer.search(state.concept, collection=collection, max_results=20)
+        results = await indexer.search(state.concept, collection=collection, max_results=20)
         return results
 
     async def __call__(self, state: MatcherAgentState) -> MatcherAgentState:
