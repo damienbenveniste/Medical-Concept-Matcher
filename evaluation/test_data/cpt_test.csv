@@ -1,0 +1,101 @@
+code,text
+Q0247,Sotrovimab
+0224U,Antibody sars-cov-2 titer(s)
+78227,Hepatobil syst image w/drug
+97028,Ultraviolet therapy
+0390U,Ob pe kdr eng&rbp4 ia alg
+76810,Ob us >/= 14 wks addl fetus
+0239U,Trgt gen seq alys pnl 311+
+86890,Autologous blood process
+0394U,Pfas 16 pfas compnd lc ms/ms
+G0543,Group train w/o patient
+A9600,Sr89 strontium
+90685,IIV4 vacc no prsv 0.25 ml im
+0360U,Onc lung elisa 7 autoant alg
+77262,Radiation therapy planning
+78012,Thyroid uptake measurement
+73223,Mri joint upr extr w/o&w/dye
+0635T,Ct breast w/3d uni c-/c+
+76125,Cine/video x-rays add-on
+70488,Ct maxillofacial w/o & w/dye
+0417U,Rare ds alys 335 nuc genes
+A9515,Choline c-11
+0486U,Onc pan sol tum ngs cfctdna
+0246U,Rbc dna gnotyp 16 bld groups
+77470,Special radiation treatment
+86960,Vol reduction of blood/prod
+A9547,In111 oxyquinoline
+0446U,Ai ds sle alys 10 cytokine
+Q9963,"""HOCM 350-399mg/ml iodine,1ml"""
+93990,Doppler flow testing
+0358U,Neuro alys ?-amyl 1-42&1-40
+0879T,Augmnt alys ch ct ild prep
+77763,Apply intrcav radiat compl
+0266U,Unxpl cnst hrtbl do gn xprsn
+90912,Bfb training 1st 15 min
+81528,Oncology colorectal scr
+76705,Echo exam of abdomen
+0385U,Neph ckd alg rsk dbtc kdn ds
+78070,Parathyroid nuclear imaging
+0442U,Nfct ds respir nfctj mxa&crp
+73050,X-ray exam of shoulders
+76979,Us trgt dyn mbubb ea addl
+0043U,Tbrg b grp antb 4 prtn igm
+76812,Ob us detailed addl fetus
+70240,X-ray exam pituitary saddle
+0898T,N-invas prst8 cancer est map
+G0562,Complex simulation w/pet-ct
+C2639,"""Brachytx,non-stranded,I-125"""
+0174U,Onc solid tumor 30 prtn trgt
+0016M,Onc bladder mrna 219 gen alg
+A4650,Implant radiation dosimeter
+90658,IIV3 vaccine splt 0.5 ml im
+0307U,Onc mrd nxt-gnrj alys sbsq
+92597,Oral speech device eval
+0495U,Onc prst8 alys crcg plsm prt
+0477U,Rx metab psy 14&cyp2d6 gn-rx
+G0144,"""Scr c/v cyto,thinlayer,rescr"""
+78075,Adrenal nuclear imaging
+73218,Mri upper extremity w/o dye
+70190,X-ray exam of eye sockets
+G0124,Screen c/v thin layer by MD
+0412U,Beta amyloid ab42/40 imprcip
+C1719,"""Brachytx, NS, Non-HDRIr-192"""
+63621,SRS spinal lesion addl
+0230U,Ar full sequence analysis
+97799,Physical medicine procedure
+19298,Place breast rad tube/caths
+73222,Mri joint upr extrem w/dye
+77316,Brachytx isodose plan simple
+73700,Ct lower extremity w/o dye
+0464U,Onc clrct scr qrtsa dna mrk
+70554,Fmri brain by tech
+72082,X-ray exam entire spi 2/3 vw
+Q2036,"""Flulaval vacc, 3 yrs & >, im"""
+Q9959,"""HOCM 150-199mg/ml iodine,1ml"""
+0355U,Apol1 risk variants
+0633T,Ct breast w/3d uni c-
+78459,Myocrd img pet single study
+0095U,Ee 2 prtn bmrk elisa est
+77499,Radiation therapy management
+51020,Cystotomy/cystostomy w/fulg [only when cystotomy/cystostomy includes insertion of radioactive material]
+A9508,"""I131 iodobenguate, dx"""
+0174T,Cad cxr with interp
+78600,Brain image < 4 views
+91318,Sarscov2 vac 3mcg trs-suc im
+78496,Heart first pass add-on
+A9506,Tc-99m graphite crucible
+0269U,Hem aut dm cgen trmbctpna 22
+0440U,Crd chd dna alys 10 snp 6dna
+Q9958,"""HOCM <=149 mg/ml iodine, 1ml"""
+90740,Hepb vacc 3 dose immunsup im
+U0001,2019-ncov diagnostic p
+A9579,"""Gad-base MR contrast NOS,1ml  """
+90689,Vacc iiv4 no prsrv 0.25ml im
+77046,Mri breast c-unilateral
+P9615,Urine specimen collect mult
+78433,Myocrd img pet 2rtracer ct
+G2250,"""Remot img sub by pt, non e/m"""
+A4642,In111 satumomab
+0899T,N-invas deter aqmbf aug cmr
+93981,Penile vascular study
